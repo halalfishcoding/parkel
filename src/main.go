@@ -2,11 +2,29 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 	"os"
 	"os/exec"
 )
 
-func initContainer () bool {
+// type Container struct {
+// 	id string
+// 	owner string
+// 	language string
+// }
+
+func CreateContainerAuth (w, http.ResponseWriter, r *http.Request) {
+	fmt.Println("request received")
+}
+
+// func _retrieveContainerId () string {
+// 	//open file here 
+// }
+
+
+
+func InitContainer () bool {
 	result := &exec.Cmd {
 		Path: "sh",
 		Args: []string {"sh", "/scripts/init_container.sh"}	,
@@ -19,6 +37,13 @@ func initContainer () bool {
 		return true
 	}
 	return false
+}
+
+
+
+func HttpHandler () {
+	http.HandleFunc("/CreateContainer", CreateContainerAuth)
+    log.Fatal(http.ListenAndServe(":10000", nil))
 }
 
 
