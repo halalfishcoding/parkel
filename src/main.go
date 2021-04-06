@@ -14,9 +14,9 @@ import (
 // 	language string
 // }
 
-func CreateContainerAuth (w http.ResponseWriter, r *http.Request) {
-	fmt.Println("request received")
-}
+// func CreateContainerAuth (w http.ResponseWriter, r *http.Request) {
+// 	fmt.Println("request received")
+// }
 
 // func _retrieveContainerId () string {
 // 	//open file here 
@@ -42,8 +42,8 @@ func InitContainer () bool {
 
 
 func HttpHandler () {
-	http.HandleFunc("/CreateContainer", CreateContainerAuth)
-    log.Fatal(http.ListenAndServe(":10000", nil))
+	// http.HandleFunc("/CreateContainer", CreateContainerAuth)
+    // log.Fatal(http.ListenAndServe(":10000", nil))
 }
 
 
