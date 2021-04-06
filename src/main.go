@@ -14,7 +14,7 @@ import (
 // 	language string
 // }
 
-func CreateContainerAuth (w, http.ResponseWriter, r *http.Request) {
+func CreateContainerAuth (w http.ResponseWriter, r *http.Request) {
 	fmt.Println("request received")
 }
 
